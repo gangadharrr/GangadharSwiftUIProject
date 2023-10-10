@@ -17,6 +17,7 @@
 		A7A087562AD5300E0069D0C1 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087552AD5300E0069D0C1 /* RegistrationView.swift */; };
 		A7A087592AD545EC0069D0C1 /* InputFieldWithLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087582AD545EB0069D0C1 /* InputFieldWithLogo.swift */; };
 		A7A0875D2AD557E80069D0C1 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0875C2AD557E80069D0C1 /* LaunchView.swift */; };
+		A7A087622AD567060069D0C1 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087612AD567060069D0C1 /* ApiConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A7A087552AD5300E0069D0C1 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		A7A087582AD545EB0069D0C1 /* InputFieldWithLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWithLogo.swift; sourceTree = "<group>"; };
 		A7A0875C2AD557E80069D0C1 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		A7A087612AD567060069D0C1 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		A7A0874B2AD52C360069D0C1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A7A087612AD567060069D0C1 /* ApiConfig.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			files = (
 				A7A087592AD545EC0069D0C1 /* InputFieldWithLogo.swift in Sources */,
 				A7A0875D2AD557E80069D0C1 /* LaunchView.swift in Sources */,
+				A7A087622AD567060069D0C1 /* ApiConfig.swift in Sources */,
 				A7A087562AD5300E0069D0C1 /* RegistrationView.swift in Sources */,
 				A7A087542AD52F1A0069D0C1 /* LoginView.swift in Sources */,
 				A7A0871E2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift in Sources */,
