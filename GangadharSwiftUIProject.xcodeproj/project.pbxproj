@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A7A0871E2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0871D2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift */; };
-		A7A087202AD529E20069D0C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0871F2AD529E20069D0C1 /* ContentView.swift */; };
 		A7A087222AD529E40069D0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A087212AD529E40069D0C1 /* Assets.xcassets */; };
 		A7A087252AD529E40069D0C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A087242AD529E40069D0C1 /* Preview Assets.xcassets */; };
 		A7A0872F2AD529E40069D0C1 /* GangadharSwiftUIProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0872E2AD529E40069D0C1 /* GangadharSwiftUIProjectTests.swift */; };
 		A7A087392AD529E40069D0C1 /* GangadharSwiftUIProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087382AD529E40069D0C1 /* GangadharSwiftUIProjectUITests.swift */; };
 		A7A0873B2AD529E40069D0C1 /* GangadharSwiftUIProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0873A2AD529E40069D0C1 /* GangadharSwiftUIProjectUITestsLaunchTests.swift */; };
+		A7A087542AD52F1A0069D0C1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087532AD52F1A0069D0C1 /* LoginView.swift */; };
+		A7A087562AD5300E0069D0C1 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087552AD5300E0069D0C1 /* RegistrationView.swift */; };
+		A7A087592AD545EC0069D0C1 /* InputFieldWithLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087582AD545EB0069D0C1 /* InputFieldWithLogo.swift */; };
+		A7A0875D2AD557E80069D0C1 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0875C2AD557E80069D0C1 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		A7A0871A2AD529E20069D0C1 /* GangadharSwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GangadharSwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A0871D2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GangadharSwiftUIProjectApp.swift; sourceTree = "<group>"; };
-		A7A0871F2AD529E20069D0C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A7A087212AD529E40069D0C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7A087242AD529E40069D0C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7A0872A2AD529E40069D0C1 /* GangadharSwiftUIProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GangadharSwiftUIProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +47,10 @@
 		A7A087382AD529E40069D0C1 /* GangadharSwiftUIProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GangadharSwiftUIProjectUITests.swift; sourceTree = "<group>"; };
 		A7A0873A2AD529E40069D0C1 /* GangadharSwiftUIProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GangadharSwiftUIProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A7A087502AD52E210069D0C1 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		A7A087532AD52F1A0069D0C1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A7A087552AD5300E0069D0C1 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		A7A087582AD545EB0069D0C1 /* InputFieldWithLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWithLogo.swift; sourceTree = "<group>"; };
+		A7A0875C2AD557E80069D0C1 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		A7A0871C2AD529E20069D0C1 /* GangadharSwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
+				A7A087572AD545AF0069D0C1 /* Components */,
 				A7A0874D2AD52C570069D0C1 /* CustomControls */,
 				A7A0874C2AD52C410069D0C1 /* Extensions */,
 				A7A0874B2AD52C360069D0C1 /* Common */,
@@ -103,7 +110,6 @@
 				A7A087482AD52BF20069D0C1 /* Views */,
 				A7A087472AD52BC90069D0C1 /* Data */,
 				A7A0871D2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift */,
-				A7A0871F2AD529E20069D0C1 /* ContentView.swift */,
 				A7A087212AD529E40069D0C1 /* Assets.xcassets */,
 				A7A087232AD529E40069D0C1 /* Preview Content */,
 				A7A087502AD52E210069D0C1 /* ReadMe.txt */,
@@ -146,6 +152,9 @@
 		A7A087482AD52BF20069D0C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7A087532AD52F1A0069D0C1 /* LoginView.swift */,
+				A7A087552AD5300E0069D0C1 /* RegistrationView.swift */,
+				A7A0875C2AD557E80069D0C1 /* LaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +192,14 @@
 			children = (
 			);
 			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		A7A087572AD545AF0069D0C1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A7A087582AD545EB0069D0C1 /* InputFieldWithLogo.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7A087202AD529E20069D0C1 /* ContentView.swift in Sources */,
+				A7A087592AD545EC0069D0C1 /* InputFieldWithLogo.swift in Sources */,
+				A7A0875D2AD557E80069D0C1 /* LaunchView.swift in Sources */,
+				A7A087562AD5300E0069D0C1 /* RegistrationView.swift in Sources */,
+				A7A087542AD52F1A0069D0C1 /* LoginView.swift in Sources */,
 				A7A0871E2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +503,7 @@
 				DEVELOPMENT_TEAM = PTF4RS2HST;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GangadharSwiftUIProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -512,6 +533,7 @@
 				DEVELOPMENT_TEAM = PTF4RS2HST;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GangadharSwiftUIProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
