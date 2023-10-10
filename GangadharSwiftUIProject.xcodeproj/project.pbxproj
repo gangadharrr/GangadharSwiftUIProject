@@ -44,6 +44,7 @@
 		A7A087342AD529E40069D0C1 /* GangadharSwiftUIProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GangadharSwiftUIProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A087382AD529E40069D0C1 /* GangadharSwiftUIProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GangadharSwiftUIProjectUITests.swift; sourceTree = "<group>"; };
 		A7A0873A2AD529E40069D0C1 /* GangadharSwiftUIProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GangadharSwiftUIProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7A087502AD52E210069D0C1 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +95,18 @@
 		A7A0871C2AD529E20069D0C1 /* GangadharSwiftUIProject */ = {
 			isa = PBXGroup;
 			children = (
+				A7A0874D2AD52C570069D0C1 /* CustomControls */,
+				A7A0874C2AD52C410069D0C1 /* Extensions */,
+				A7A0874B2AD52C360069D0C1 /* Common */,
+				A7A0874A2AD52C000069D0C1 /* Utilities */,
+				A7A087492AD52BFA0069D0C1 /* Models */,
+				A7A087482AD52BF20069D0C1 /* Views */,
+				A7A087472AD52BC90069D0C1 /* Data */,
 				A7A0871D2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift */,
 				A7A0871F2AD529E20069D0C1 /* ContentView.swift */,
 				A7A087212AD529E40069D0C1 /* Assets.xcassets */,
 				A7A087232AD529E40069D0C1 /* Preview Content */,
+				A7A087502AD52E210069D0C1 /* ReadMe.txt */,
 			);
 			path = GangadharSwiftUIProject;
 			sourceTree = "<group>";
@@ -125,6 +134,55 @@
 				A7A0873A2AD529E40069D0C1 /* GangadharSwiftUIProjectUITestsLaunchTests.swift */,
 			);
 			path = GangadharSwiftUIProjectUITests;
+			sourceTree = "<group>";
+		};
+		A7A087472AD52BC90069D0C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A7A087482AD52BF20069D0C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7A087492AD52BFA0069D0C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7A0874A2AD52C000069D0C1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A7A0874B2AD52C360069D0C1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A7A0874C2AD52C410069D0C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A7A0874D2AD52C570069D0C1 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomControls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
