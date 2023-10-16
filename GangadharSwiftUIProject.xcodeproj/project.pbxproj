@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7686EDF2ADCFA2100D85E18 /* ThreadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7686EDE2ADCFA2100D85E18 /* ThreadingView.swift */; };
+		A7686EE72ADD0F6000D85E18 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7686EE62ADD0F6000D85E18 /* ImageLoader.swift */; };
+		A794D3332ADD395A00A12DB7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794D3322ADD395A00A12DB7 /* StringExtension.swift */; };
+		A794D3352ADD3E9C00A12DB7 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794D3342ADD3E9C00A12DB7 /* ViewExtensions.swift */; };
+		A794D3372ADD406E00A12DB7 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A794D3362ADD406E00A12DB7 /* NetworkMonitor.swift */; };
 		A7A0871E2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0871D2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift */; };
 		A7A087222AD529E40069D0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A087212AD529E40069D0C1 /* Assets.xcassets */; };
 		A7A087252AD529E40069D0C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A087242AD529E40069D0C1 /* Preview Assets.xcassets */; };
@@ -18,6 +23,8 @@
 		A7A087592AD545EC0069D0C1 /* InputFieldWithLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087582AD545EB0069D0C1 /* InputFieldWithLogo.swift */; };
 		A7A0875D2AD557E80069D0C1 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0875C2AD557E80069D0C1 /* LaunchView.swift */; };
 		A7A087622AD567060069D0C1 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087612AD567060069D0C1 /* ApiConfig.swift */; };
+		A7A087642AD567B70069D0C1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087632AD567B70069D0C1 /* Messages.swift */; };
+		A7A087662AD5A1D10069D0C1 /* WarningMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087652AD5A1D10069D0C1 /* WarningMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7686EDE2ADCFA2100D85E18 /* ThreadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadingView.swift; sourceTree = "<group>"; };
+		A7686EE62ADD0F6000D85E18 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		A794D3322ADD395A00A12DB7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A794D3342ADD3E9C00A12DB7 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		A794D3362ADD406E00A12DB7 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		A7A0871A2AD529E20069D0C1 /* GangadharSwiftUIProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GangadharSwiftUIProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A0871D2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GangadharSwiftUIProjectApp.swift; sourceTree = "<group>"; };
 		A7A087212AD529E40069D0C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +65,8 @@
 		A7A087582AD545EB0069D0C1 /* InputFieldWithLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWithLogo.swift; sourceTree = "<group>"; };
 		A7A0875C2AD557E80069D0C1 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		A7A087612AD567060069D0C1 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		A7A087632AD567B70069D0C1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		A7A087652AD5A1D10069D0C1 /* WarningMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +171,7 @@
 				A7A087532AD52F1A0069D0C1 /* LoginView.swift */,
 				A7A087552AD5300E0069D0C1 /* RegistrationView.swift */,
 				A7A0875C2AD557E80069D0C1 /* LaunchView.swift */,
+				A7686EDE2ADCFA2100D85E18 /* ThreadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +179,7 @@
 		A7A087492AD52BFA0069D0C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A7A087652AD5A1D10069D0C1 /* WarningMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +187,8 @@
 		A7A0874A2AD52C000069D0C1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A7686EE62ADD0F6000D85E18 /* ImageLoader.swift */,
+				A794D3362ADD406E00A12DB7 /* NetworkMonitor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -179,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				A7A087612AD567060069D0C1 /* ApiConfig.swift */,
+				A7A087632AD567B70069D0C1 /* Messages.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -186,6 +205,8 @@
 		A7A0874C2AD52C410069D0C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A794D3322ADD395A00A12DB7 /* StringExtension.swift */,
+				A794D3342ADD3E9C00A12DB7 /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,9 +358,16 @@
 			files = (
 				A7A087592AD545EC0069D0C1 /* InputFieldWithLogo.swift in Sources */,
 				A7A0875D2AD557E80069D0C1 /* LaunchView.swift in Sources */,
+				A7A087662AD5A1D10069D0C1 /* WarningMessage.swift in Sources */,
 				A7A087622AD567060069D0C1 /* ApiConfig.swift in Sources */,
+				A7686EE72ADD0F6000D85E18 /* ImageLoader.swift in Sources */,
+				A7686EDF2ADCFA2100D85E18 /* ThreadingView.swift in Sources */,
+				A7A087642AD567B70069D0C1 /* Messages.swift in Sources */,
+				A794D3332ADD395A00A12DB7 /* StringExtension.swift in Sources */,
 				A7A087562AD5300E0069D0C1 /* RegistrationView.swift in Sources */,
+				A794D3372ADD406E00A12DB7 /* NetworkMonitor.swift in Sources */,
 				A7A087542AD52F1A0069D0C1 /* LoginView.swift in Sources */,
+				A794D3352ADD3E9C00A12DB7 /* ViewExtensions.swift in Sources */,
 				A7A0871E2AD529E20069D0C1 /* GangadharSwiftUIProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +534,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GangadharSwiftUIProject/Preview Content\"";
 				DEVELOPMENT_TEAM = PTF4RS2HST;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GangadharSwiftUIProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -536,6 +565,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GangadharSwiftUIProject/Preview Content\"";
 				DEVELOPMENT_TEAM = PTF4RS2HST;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GangadharSwiftUIProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
