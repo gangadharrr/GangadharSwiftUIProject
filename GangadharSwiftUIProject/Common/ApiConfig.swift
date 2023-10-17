@@ -9,9 +9,11 @@ import Foundation
 public class WebContants{
     static let baseURL = "https://reqres.in/api/"
     static let login = "login"
-    static let users = "users?page="
+    static let users = "users?page=2"
     static let user = "users/2"
-    
-    
-    
+
+}
+
+public struct AppKeys{
+    static let Token="TOKEN"
 }

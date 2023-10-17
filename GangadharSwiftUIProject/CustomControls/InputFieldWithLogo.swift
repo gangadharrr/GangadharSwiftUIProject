@@ -26,6 +26,7 @@ struct InputFieldWithLogo: View {
                             .padding(10)
                             .cornerRadius(7.0).padding(.horizontal,10)
                             .textContentType(.password).frame(maxHeight: 40)
+                            .autocapitalization(.none)
                         if(warningMessage.showWarning){
                             Button("", systemImage:"exclamationmark.triangle.fill") {
                                 showAlert.toggle()
@@ -48,6 +49,7 @@ struct InputFieldWithLogo: View {
                             .padding(10)
                             .cornerRadius(7.0).padding(.horizontal,10)
                             .textContentType(.password).frame(maxHeight: 40)
+                            .autocapitalization(.none)
                         if(warningMessage.showWarning){
                             Button("", systemImage:"exclamationmark.triangle.fill") {
                                 showAlert.toggle()
@@ -79,6 +81,7 @@ struct InputFieldWithLogo: View {
                         .cornerRadius(7.0).padding(.horizontal,10)
                         .padding(.trailing,40)
                         .frame(maxHeight: 40)
+                        .autocapitalization(.none)
                     if(warningMessage.showWarning){
                         Button("", systemImage:"exclamationmark.triangle.fill") {
                             showAlert.toggle()
@@ -107,7 +110,7 @@ struct InputFieldWithLogo: View {
 }
 
 #Preview {
-    InputFieldWithLogo(InputField: .constant(""),PlaceHolder: "PlaceHOler", ImageName:"person",Password: true,warningMessage: .constant(WarningMessage(title: "", message: "", dismissText: "")))
+    InputFieldWithLogo(InputField: .constant(""),PlaceHolder: "PlaceHOler", ImageName:"person",Password: false,warningMessage: .constant(WarningMessage(title: "", message: "", dismissText: "")))
 }
 
 

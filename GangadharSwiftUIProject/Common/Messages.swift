@@ -17,4 +17,5 @@ public class Messages{
     static let EmailErrorMessage="Please check your Email"
     static let PasswordErrorMessage="Please check your Password"
     static let Authenticating="Authenticating..."
+    static let LoginFailed="Login Failed Try Again"
 }

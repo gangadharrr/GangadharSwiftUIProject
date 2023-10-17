@@ -16,7 +16,6 @@ Models -> Data Models All Structs, Classes, Enums
 Extensions -> Contains class/struct Extensions
 CustomControls -> Custom Reusable Ui Components
 Common -> Common things about the App like Constants, Storage
-Components -> Reusable Components
 Utilities -> Implementations of Custom Utlitlies like Network Check, Availibility Check
 
 1 -> Create LoginView and RegistrationView
