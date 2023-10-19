@@ -6,17 +6,17 @@
 //
 
 import SwiftUI
-
+import LocalAuthentication
 struct LoginView: View {
     @ObservedObject var network = NetworkMonitor()
-    @State var InputEmail:String=""
-    @State var InputPassword:String=""
+    @State var InputEmail:String=StringConstants.EmptyString
+    @State var InputPassword:String=StringConstants.EmptyString
     @State var ShowPassword:Bool=false
     @State var ShowRegisterView:Bool=false
     @State var isBusy:Bool=false
-    @State var EmailError:WarningMessage=WarningMessage(title: Titles.EmailErrorTitle, message: Messages.EmailErrorMessage, dismissText: "Try Again")
-    @State var PasswordError:WarningMessage=WarningMessage(title: Titles.PasswordErrorTitle, message: Messages.PasswordErrorMessage, dismissText: "Try Again")
-    @State var ErrorMessage:WarningMessage=WarningMessage(title:Titles.NetworkErrorTitle , message: Messages.NetworkErrorMessages, dismissText: "Try Again")
+    @State var EmailError:WarningMessage=WarningMessage(title: Titles.EmailErrorTitle, message: Messages.EmailErrorMessage, dismissText: Messages.TryAgain)
+    @State var PasswordError:WarningMessage=WarningMessage(title: Titles.PasswordErrorTitle, message: Messages.PasswordErrorMessage, dismissText: Messages.TryAgain)
+    @State var ErrorMessage:WarningMessage=WarningMessage(title:Titles.NetworkErrorTitle , message: Messages.NetworkErrorMessages, dismissText: Messages.TryAgain)
     @State var loginFailed=false
     @State var UserDisplayScreen:Bool=false
     var body: some View {
@@ -29,7 +29,7 @@ struct LoginView: View {
                 ZStack{
                     VStack{
                         Spacer()
-                        Image("AppLogo").resizable().aspectRatio(contentMode: .fit).frame(width:200,height: 200)
+                        Image(ImageConstants.AppLogo).resizable().aspectRatio(contentMode: .fit).frame(width:200,height: 200)
                         if(loginFailed){
                             Text(Messages.LoginFailed).foregroundColor(.red)
                                 .onAppear{
@@ -41,8 +41,8 @@ struct LoginView: View {
                                 }
                         }
                         InputFieldWithLogo(InputField: $InputEmail,
-                                           PlaceHolder: "Enter Email",
-                                           ImageName: "person.fill",
+                                           PlaceHolder: PlaceholdersConstants.Email,
+                                           ImageName: ImageConstants.SYSPersonFill,
                                            warningMessage:$EmailError
                         ).padding(.vertical,5).onSubmit() {
                             self.EmailError.showWarning = !InputEmail.isValidEmail()
@@ -50,8 +50,8 @@ struct LoginView: View {
                         }
                         
                         InputFieldWithLogo(InputField: $InputPassword,
-                                           PlaceHolder: "Enter Password",
-                                           ImageName: "lock.fill",Password: true,
+                                           PlaceHolder: PlaceholdersConstants.Password,
+                                           ImageName: ImageConstants.SYSLockFill,Password: true,
                                            warningMessage:$PasswordError , ShowPassword: ShowPassword
                         ).padding(.vertical, Constants.textfieldSpacing).onSubmit {
                             self.PasswordError.showWarning = InputPassword.isEmpty
@@ -66,10 +66,10 @@ struct LoginView: View {
                             tryLoginWithProtocol()
                             
                         }label:{
-                            Text("Login").frame(maxWidth: .infinity)
+                            Text(LabelConstants.Login).frame(maxWidth: .infinity)
                                 .foregroundColor(.white).padding(8)
                                 .font(.system(size: 21))
-                                .background(Color("Primary"))
+                                .background(Color(ColorConstants.primaryColor))
                                 .cornerRadius(7.0)
                             
                         }.frame(maxWidth: 330)
@@ -83,7 +83,11 @@ struct LoginView: View {
                                     })
                                 )
                             }
-                        
+                        Button{
+                            Authentication()
+                        }label: {
+                            Image(systemName: ImageConstants.SYSFaceId).dynamicTypeSize(.xxxLarge)
+                        }
                         Spacer()
                         Spacer()
                         Spacer()
@@ -93,18 +97,20 @@ struct LoginView: View {
                             }
                             
                         }label: {
-                            Text("New User? Register").foregroundColor(Color("Primary"))
+                            Text(LabelConstants.NewUserRegister).foregroundColor(Color(ColorConstants.primaryColor))
                         }
                     }
                 }.onTapGesture {
                     self.endEditing()
                 }
-                .navigationBarTitle("Login").navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitle(LabelConstants.Login).navigationBarTitleDisplayMode(.inline)
             }
             
-            
-            
         }
+        
+        
+        
+        
     }
     private func tryLoginWithProtocol(){
         if(!network.isConnected){
@@ -134,6 +140,32 @@ struct LoginView: View {
             }
         }.resume()
         
+        
+    }
+    private func Authentication(){
+        
+        let context = LAContext()
+        var authError: NSError?
+        let reasonString = RequestConstants.Login
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+    
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString) { success, evaluateError in
+                DispatchQueue.main.async {
+                    if success {
+                        withAnimation{
+                            UserDisplayScreen=true
+                        }
+                        
+                    } else {
+                        guard evaluateError != nil else {
+                            return
+                        }
+                        
+                    }
+                }
+            }
+        }
         
     }
     private func tryLogin(){
@@ -171,6 +203,8 @@ struct LoginView: View {
         // NSHomeDirectory will print path of local storage at which app is stored
         if let token = responseData?.token{
             UserDefaults.standard.setValue(token, forKey: AppKeys.Token)
+            UserDefaults.standard.setValue(InputEmail, forKey: AppKeys.Email)
+            UserDefaults.standard.setValue(InputPassword, forKey: AppKeys.Password)
             print(NSHomeDirectory())
         }
         

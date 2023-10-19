@@ -27,4 +27,23 @@ class ProfileDataLoader: ObservableObject{
             userProfile = usersData.data
         }
     }
+    func getUsers(_ id:Int) async throws{
+        guard let userUrl = URL(string:"\(WebContants.baseURL)\(WebContants.fetchuser)\(id)") else{
+                fatalError()
+            }
+            let userRequest = URLRequest(url: userUrl)
+            let (data, response) = try await URLSession.shared.data(for: userRequest)
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else{
+                fatalError()
+            }
+            
+        Task{ @MainActor in
+            let allUsersData = try?  JSONDecoder().decode(SingleUser.self, from: data)
+            guard let usersData = allUsersData else{
+                fatalError()
+            }
+            userProfile = usersData.data
+        }
+    }
+
 }

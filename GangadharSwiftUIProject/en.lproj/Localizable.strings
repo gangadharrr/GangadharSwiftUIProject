@@ -1,0 +1,55 @@
+/*
+  Localizable.strings
+  GangadharSwiftUIProject
+
+  Created by Gangadhar C on 10/19/23.
+  
+*/
+
+
+// StringConstants
+    EmptyString = "";
+
+// LabelConstants
+    Login = "Login";
+    Register = "Register";
+    NewUserRegister = "New User? Register";
+    RegisterAlready = "Registered Already? Login";
+    Download = "Download";
+    Save = "Save";
+    Cancel = "Cancel";
+    Reset = "Reset";
+    Users = "Users";
+    UsersDetails = "Users Details";
+    ContactDetails = "Contact Details";
+
+
+// PlaceholdersConstants
+    Email = "Enter Email";
+    Password = "Enter Password";
+     FirstName = "Enter First Name";
+     LastName = "Enter Last Name";
+    reEnterPassword = "Re-Enter Password";
+    Username = "Enter Username";
+    UserDetails = "Enter User Details";
+
+// Titles
+    NetworkErrorTitle="Network Error!";
+    EmailErrorTitle="Invalid Email!";
+    PasswordErrorTitle="Wrong Password!";
+    AddProfilePicture="Add Profile Picture";
+
+// Messages
+    NetworkErrorMessages="No, Internet please check your connection";
+    EmailErrorMessage="Please check your Email";
+    PasswordErrorMessage="Please check your Password";
+    Authenticating="Authenticating...";
+    LoginFailed="Login Failed Try Again";
+    FetchingUsers="Fetching Users...";
+    TryAgain = "Try Again";
+
+// RequestConstants
+    Login = "To Login Into App";
+
+
+

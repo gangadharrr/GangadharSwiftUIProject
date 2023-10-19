@@ -1,0 +1,52 @@
+/*
+  Localizable.strings
+  GangadharSwiftUIProject
+
+  Created by Gangadhar C on 19/10/23.
+  
+*/
+
+
+// Constantes de Cadenas
+    EmptyString = "";
+
+// Constantes de Etiquetas
+    Login = "Iniciar sesión";
+    Register = "Registrarse";
+    NewUserRegister = "¿Nuevo usuario? Registrarse";
+    RegisterAlready = "¿Ya registrado? Iniciar sesión";
+    Download = "Descargar";
+    Save = "Guardar";
+    Cancel = "Cancelar";
+    Reset = "Restablecer";
+    Users = "Usuarios";
+    UsersDetails = "Detalles de Usuarios";
+    ContactDetails = "Detalles de Contacto";
+
+
+// Constantes de Marcadores de posición
+    Email = "Ingrese su correo electrónico";
+    Password = "Ingrese su contraseña";
+    FirstName = "Ingrese su nombre";
+    LastName = "Ingrese su apellido";
+    reEnterPassword = "Vuelva a ingresar la contraseña";
+    Username = "Ingrese su nombre de usuario";
+    UserDetails = "Ingrese los detalles del usuario";
+
+// Títulos
+    NetworkErrorTitle = "Error de red";
+    EmailErrorTitle = "Correo electrónico no válido";
+    PasswordErrorTitle = "Contraseña incorrecta";
+    AddProfilePicture = "Agregar foto de perfil";
+
+// Mensajes
+    NetworkErrorMessages = "No hay conexión a Internet, por favor verifique su conexión";
+    EmailErrorMessage = "Por favor, verifique su correo electrónico";
+    PasswordErrorMessage = "Por favor, verifique su contraseña";
+    Authenticating = "Autenticando...";
+    LoginFailed = "Inicio de sesión fallido. Inténtelo de nuevo";
+    FetchingUsers = "Obteniendo usuarios...";
+    TryAgain = "Inténtelo de nuevo";
+
+// Constantes de Solicitudes
+    LoginRequest = "Para iniciar sesión en la aplicación";

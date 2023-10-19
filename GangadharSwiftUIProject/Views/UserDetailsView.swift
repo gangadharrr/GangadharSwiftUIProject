@@ -9,16 +9,31 @@ import SwiftUI
 
 struct UserDetailsView: View {
     var user:UserData
+    @State var isLoading:Bool=true
     var body: some View {
-        NavigationStack{
-            VStack{
-                Text("User Details").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).bold()
-                AsyncImage(url: user.avatarURL,scale: 0.5).scaledToFit().clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                Text(user.fullName).font(.title2).bold()
-                Text(user.email).font(.title3).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                Spacer()
+        if(isLoading){
+            BusyView(message: Messages.FetchingUsers).onAppear{
+                isLoading=false
             }
         }
+        else{
+            NavigationStack{
+                VStack{
+                    Text(LabelConstants.UsersDetails).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).bold()
+                    AsyncImage(url: user.avatarURL,scale: 0.5){ image in
+                        image.resizable()
+                            .scaledToFit().clipShape(Circle())
+                            .frame(width: 200, height: 200)
+                    }placeholder:{
+                        ProgressView().dynamicTypeSize(.xxxLarge)
+                    }
+                    Text(user.fullName).font(.title2).bold()
+                    Text(user.email).font(.title3).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    Spacer()
+                }
+            }
+        }
+     
         
         
     }

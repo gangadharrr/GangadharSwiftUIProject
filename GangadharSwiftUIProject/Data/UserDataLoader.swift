@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 class UserDataLoader: ObservableObject{
     @Published var allUsers=[UserData]()
-    func getUsers() async throws{
+    func getUsers()  async throws {
             guard let userUrl = URL(string:"\(WebContants.baseURL)\(WebContants.users)") else{
                 fatalError()
             }
@@ -25,6 +25,7 @@ class UserDataLoader: ObservableObject{
                 fatalError()
             }
             allUsers = usersData.data
+            
         }
     }
 }

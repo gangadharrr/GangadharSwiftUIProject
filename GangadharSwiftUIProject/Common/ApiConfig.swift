@@ -11,9 +11,12 @@ public class WebContants{
     static let login = "login"
     static let users = "users?page=2"
     static let user = "users/2"
+    static let fetchuser = "users/"
 
 }
 
 public struct AppKeys{
     static let Token="TOKEN"
+    static let Email="EMAIL"
+    static let Password="PASSWORD"
 }

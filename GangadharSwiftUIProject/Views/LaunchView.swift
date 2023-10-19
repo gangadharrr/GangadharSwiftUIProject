@@ -12,13 +12,13 @@ struct LaunchView: View {
     var body: some View {
         if(isSplash){
             ZStack{
-                LinearGradient(colors: [Color("Primary"),Color("Secondary")], startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(colors: [Color(ColorConstants.primaryColor),Color(ColorConstants.secondaryColor)], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea(.all)
                 VStack{
                     Spacer()
-                    Image("AppLogo").resizable().aspectRatio(contentMode: .fit).frame(width:300,height: 300)
+                    Image(ImageConstants.AppLogo).resizable().aspectRatio(contentMode: .fit).frame(width:300,height: 300)
                     Spacer()
-                    Text("Version 0.0.1").foregroundColor(.white)
+                    Text(AppInfo.AppVersion).foregroundColor(.white)
                 }
             }.onAppear{
                 DispatchQueue.main.asyncAfter(deadline: .now()+1, execute:{
@@ -29,7 +29,13 @@ struct LaunchView: View {
             }
         }
         else{
-            LoginView()
+            if(UserDefaults.standard.bool(forKey: AppKeys.Token)){
+                UserHomeView()
+                
+            }else{
+                LoginView()
+            }
+            
         }
         
     }

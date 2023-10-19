@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ThreadingView: View {
-    @State var images:[UIImage]=[UIImage(named:"Test")!,UIImage(named:"Test")!,UIImage(named:"Test")!,UIImage(named:"Test")!]
+    @State var images:[UIImage]=[UIImage(named:ImageConstants.Test)!,UIImage(named:ImageConstants.Test)!,UIImage(named:ImageConstants.Test)!,UIImage(named:ImageConstants.Test)!]
     var queue=OperationQueue()
     let imageLoader=ImageLoader()
     var body: some View {
@@ -23,12 +23,12 @@ struct ThreadingView: View {
             }
             
             HStack{
-                Button("Download"){
+                Button(LabelConstants.Download){
                     downloadImageWithCache()
                 }
                 Spacer()
-                Button("Reset"){
-                    images=[UIImage(named:"Test")!,UIImage(named:"Test")!,UIImage(named:"Test")!,UIImage(named:"Test")!]
+                Button(LabelConstants.Reset){
+                    images=[UIImage(named:ImageConstants.Test)!,UIImage(named:ImageConstants.Test)!,UIImage(named:ImageConstants.Test)!,UIImage(named:ImageConstants.Test)!]
                 }
             }.padding()
            
@@ -40,28 +40,24 @@ struct ThreadingView: View {
             let image = Downloader().downloadImageFromURL(imageURLStrings[0])
             OperationQueue.main.addOperation {
                 images[0]=image
-                print("Operation 1 Completed")
             }
         }
         let op2=BlockOperation {
             let image = Downloader().downloadImageFromURL(imageURLStrings[1])
             OperationQueue.main.addOperation {
                 images[1]=image
-                print("Operation 2 Completed")
             }
         }
         let op3=BlockOperation {
             let image = Downloader().downloadImageFromURL(imageURLStrings[2])
             OperationQueue.main.addOperation {
                 images[2]=image
-                print("Operation 3 Completed")
             }
         }
         let op4=BlockOperation {
             let image = Downloader().downloadImageFromURL(imageURLStrings[3])
             OperationQueue.main.addOperation {
                 images[3]=image
-                print("Operation 4 Completed")
             }
         }
         queue.addOperation(op1)
@@ -90,6 +86,6 @@ class Downloader{
         if let imageData = try? Data(contentsOf: URL(string: imageURLString)!){
             return UIImage(data: imageData)!
         }
-        return UIImage(named: "Test")!
+        return UIImage(named: ImageConstants.Test)!
     }
 }

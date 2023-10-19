@@ -9,36 +9,55 @@ import SwiftUI
 
 struct UserHomeView: View {
     @ObservedObject var usersData=UserDataLoader()
-    var users:[UserData]{
-        usersData.allUsers
-    }
+    @State var newUser:UserData?
+    @State var isLoading:Bool=true
+    @State var ShowAddUser:Bool=false
     var body: some View {
-        NavigationStack{
-            ZStack {
-                VStack{
-                    List{
-                        ForEach(users ,id:\.id){user in
-                        NavigationLink{
-                            UserDetailsView(user:user)
-                        }label: {
-                            UserRow(user: user)
-                        }                            
+        if(isLoading){
+            BusyView(message: Messages.FetchingUsers)
+                .onAppear(){
+                    Task{
+                        try await usersData.getUsers()
+                        isLoading=false
+                    }
+                }
+        }
+        else{
+            NavigationStack{
+                ZStack {
+                    VStack{
+                        List{
+                            ForEach(usersData.allUsers ,id:\.id){user in
+                                NavigationLink{
+                                    UserDetailsView(user:user)
+                                }label: {
+                                    UserRow(user: user)
+                                }
+                            }
                         }
                     }
-                }
-            }.navigationTitle("Users")
-                .toolbar{
-                    NavigationLink{
-                        ProfileView()
-                    }label: {
-                        CircularImage(width:30.0, height: 30.0,Image:Image("Test")).padding(.horizontal)
-                    }
+                }.onAppear{
+                    newUser=usersData.allUsers.last
+                }.sheet(isPresented:$ShowAddUser){
                     
+                    AddUserView(newUser: $usersData.allUsers)
                 }
-                .navigationBarBackButtonHidden()
-        }.onAppear(){
-            Task{
-                try await usersData.getUsers()
+                .navigationTitle(LabelConstants.Users)
+                    .toolbar{
+                        Button{
+                            ShowAddUser.toggle()
+                        }label:{
+                            Image(systemName: ImageConstants.SYSPersonFillBadgePlus)
+                        }
+                        
+                        NavigationLink{
+                            ProfileView()
+                        }label: {
+                            CircularImage(width:30.0, height: 30.0,Image:Image(ImageConstants.Test)).padding(.horizontal)
+                        }
+                        
+                    }
+                    .navigationBarBackButtonHidden()
             }
         }
         

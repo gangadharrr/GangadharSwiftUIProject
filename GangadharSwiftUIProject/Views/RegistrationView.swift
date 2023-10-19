@@ -8,40 +8,40 @@
 import SwiftUI
 
 struct RegistrationView: View {
-    @State var InputName:String=""
-    @State var InputEmail:String=""
-    @State var InputPassword:String=""
-    @State var ReTypePassword:String=""
+    @State var InputName:String=StringConstants.EmptyString
+    @State var InputEmail:String=StringConstants.EmptyString
+    @State var InputPassword:String=StringConstants.EmptyString
+    @State var ReTypePassword:String=StringConstants.EmptyString
     @State var ShowPassword:Bool=false
-    @State var EmailError:WarningMessage=WarningMessage(title: Titles.EmailErrorTitle, message: Messages.EmailErrorMessage, dismissText: "Try Again")
-    @State var PasswordError:WarningMessage=WarningMessage(title: Titles.PasswordErrorTitle, message: Messages.PasswordErrorMessage, dismissText: "Try Again")
-    @State var ReTypePasswordError:WarningMessage=WarningMessage(title: Titles.PasswordErrorTitle, message: Messages.PasswordErrorMessage, dismissText: "Try Again")
-    @State var ErrorMessage:WarningMessage=WarningMessage(title: "", message: "", dismissText: "")
+    @State var EmailError:WarningMessage=WarningMessage(title: Titles.EmailErrorTitle, message: Messages.EmailErrorMessage, dismissText: Messages.TryAgain)
+    @State var PasswordError:WarningMessage=WarningMessage(title: Titles.PasswordErrorTitle, message: Messages.PasswordErrorMessage, dismissText: Messages.TryAgain)
+    @State var ReTypePasswordError:WarningMessage=WarningMessage(title: Titles.PasswordErrorTitle, message: Messages.PasswordErrorMessage, dismissText: Messages.TryAgain)
+    @State var ErrorMessage:WarningMessage=WarningMessage(title: StringConstants.EmptyString, message: StringConstants.EmptyString, dismissText: StringConstants.EmptyString)
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack{
             VStack{
                 Spacer()
-                Image("AppLogo").resizable().aspectRatio(contentMode: .fit).frame(width:200,height: 200)
-                InputFieldWithLogo(InputField: $InputName, PlaceHolder: "Enter Name", ImageName: "person.fill",warningMessage: .constant(WarningMessage(title: "", message: "", dismissText: ""))).padding(.vertical,5)
-                InputFieldWithLogo(InputField: $InputEmail, PlaceHolder: "Enter Email", ImageName: "envelope.fill",warningMessage:$EmailError).padding(.vertical,5).onSubmit {
+                Image(ImageConstants.AppLogo).resizable().aspectRatio(contentMode: .fit).frame(width:200,height: 200)
+                InputFieldWithLogo(InputField: $InputName, PlaceHolder: PlaceholdersConstants.Username, ImageName: ImageConstants.SYSPersonFill,warningMessage: .constant(WarningMessage(title: "", message: "", dismissText: ""))).padding(.vertical,5)
+                InputFieldWithLogo(InputField: $InputEmail, PlaceHolder: PlaceholdersConstants.Email, ImageName: ImageConstants.SYSEnvelopeFill,warningMessage:$EmailError).padding(.vertical,5).onSubmit {
                     self.EmailError.showWarning = !InputEmail.isValidEmail()
                 }
                 
-                InputFieldWithLogo(InputField: $InputPassword, PlaceHolder: "Enter Password", ImageName: "lock.fill",Password: true,warningMessage: $PasswordError, ShowEye:false).padding(.vertical,5).onSubmit {
+                InputFieldWithLogo(InputField: $InputPassword, PlaceHolder: PlaceholdersConstants.Password, ImageName: ImageConstants.SYSLockFill,Password: true,warningMessage: $PasswordError, ShowEye:false).padding(.vertical,5).onSubmit {
                     self.PasswordError.showWarning = !InputPassword.isValidPassword()
                 }
-                InputFieldWithLogo(InputField: $ReTypePassword, PlaceHolder: "Re-Enter Password", ImageName: "lock.fill",Password: true,warningMessage: $ReTypePasswordError, ShowPassword: ShowPassword).padding(.vertical,5).onSubmit {
+                InputFieldWithLogo(InputField: $ReTypePassword, PlaceHolder: PlaceholdersConstants.reEnterPassword, ImageName: ImageConstants.SYSLockFill,Password: true,warningMessage: $ReTypePasswordError, ShowPassword: ShowPassword).padding(.vertical,5).onSubmit {
                     self.ReTypePasswordError.showWarning =  !(InputPassword==ReTypePassword)
                 }
                 
                 Button {
                     
                 }label:{
-                    Text("Register").frame(maxWidth: .infinity)
+                    Text(LabelConstants.Register).frame(maxWidth: .infinity)
                         .foregroundColor(.white).padding(8)
                         .font(.system(size: 21))
-                        .background(Color("Primary"))
+                        .background(Color(ColorConstants.primaryColor))
                         .cornerRadius(7.0)
                     
                 }.frame(maxWidth: 330)
@@ -53,10 +53,10 @@ struct RegistrationView: View {
                         presentationMode.wrappedValue.dismiss()
                     }
                 }label: {
-                    Text("Registered Already? Login").foregroundColor(Color("Primary"))
+                    Text(LabelConstants.RegisterAlready).foregroundColor(Color(ColorConstants.primaryColor))
                 }
                 
-            }.navigationBarTitle("Register")
+            }.navigationBarTitle(LabelConstants.Register)
             .navigationBarTitleDisplayMode(.inline)
         }.onTapGesture {
             self.endEditing()
