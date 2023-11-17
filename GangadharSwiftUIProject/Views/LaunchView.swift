@@ -12,7 +12,7 @@ struct LaunchView: View {
     var body: some View {
         if(isSplash){
             ZStack{
-                LinearGradient(colors: [Color(ColorConstants.primaryColor),Color(ColorConstants.secondaryColor)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(colors: [Color(ColorConstants.voilet),Color(ColorConstants.secondaryColor)], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea(.all)
                 VStack{
                     Spacer()

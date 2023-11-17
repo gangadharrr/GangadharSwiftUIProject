@@ -22,5 +22,5 @@ struct CircularImage: View {
 }
 
 #Preview {
-    CircularImage(width: 80.0, height: 80.0,Image:Image("Test") )
+    CircularImage(width: 80.0, height: 80.0,Image:Image(ImageConstants.Test) )
 }

@@ -3,4 +3,70 @@
    uuid = "80BAC620-E311-4E7F-A4CA-21AA7597567A"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B202346-FC22-480F-9004-A8FA194C3EDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GangadharSwiftUIProject/Views/LoginView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "tryLoginWithProtocol()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B202346-FC22-480F-9004-A8FA194C3EDE - 5f13e9981acadb83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GangadharSwiftUIProject.LoginView.tryLoginWithProtocol() -&gt; ()"
+                  moduleName = "GangadharSwiftUIProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gangadharc/Documents/Presidio%20Learning/IOS%20Projects/GangadharSwiftUIProject/GangadharSwiftUIProject/Views/LoginView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "3B202346-FC22-480F-9004-A8FA194C3EDE - 5f13e9981acadb83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GangadharSwiftUIProject.LoginView.tryLoginWithProtocol() -&gt; ()"
+                  moduleName = "GangadharSwiftUIProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gangadharc/Documents/Presidio%20Learning/IOS%20Projects/GangadharSwiftUIProject/GangadharSwiftUIProject/Views/LoginView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86EFA315-91AC-409C-B67F-9BCBFA73B248"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GangadharSwiftUIProject/Views/LoginView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "tryLoginWithProtocol()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

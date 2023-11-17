@@ -23,7 +23,7 @@ struct UserHomeView: View {
                 }
         }
         else{
-            NavigationStack{
+            NavigationView{
                 ZStack {
                     VStack{
                         List{
@@ -57,8 +57,8 @@ struct UserHomeView: View {
                         }
                         
                     }
-                    .navigationBarBackButtonHidden()
-            }
+                   
+            } .navigationBarBackButtonHidden()
         }
         
     }

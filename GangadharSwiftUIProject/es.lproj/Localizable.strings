@@ -49,4 +49,4 @@
     TryAgain = "Inténtelo de nuevo";
 
 // Constantes de Solicitudes
-    LoginRequest = "Para iniciar sesión en la aplicación";
+    LoginRequest = "iniciar";

@@ -41,6 +41,7 @@
 		A7A087622AD567060069D0C1 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087612AD567060069D0C1 /* ApiConfig.swift */; };
 		A7A087642AD567B70069D0C1 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087632AD567B70069D0C1 /* Messages.swift */; };
 		A7A087662AD5A1D10069D0C1 /* WarningMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A087652AD5A1D10069D0C1 /* WarningMessage.swift */; };
+		A7EF25FE2AE286BA00B576B8 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EF25FD2AE286BA00B576B8 /* AnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		A7A087612AD567060069D0C1 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		A7A087632AD567B70069D0C1 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		A7A087652AD5A1D10069D0C1 /* WarningMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningMessage.swift; sourceTree = "<group>"; };
+		A7EF25FD2AE286BA00B576B8 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				A794D3462ADE9FAE00A12DB7 /* ProfileView.swift */,
 				A745F2A92ADFA2450039B671 /* AddUserView.swift */,
 				A745F2B22ADFBECA0039B671 /* WebViewDisplay.swift */,
+				A7EF25FD2AE286BA00B576B8 /* AnimationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				A794D3452ADE9E5E00A12DB7 /* UserDetailsView.swift in Sources */,
 				A7A087592AD545EC0069D0C1 /* InputFieldWithLogo.swift in Sources */,
 				A7A0875D2AD557E80069D0C1 /* LaunchView.swift in Sources */,
+				A7EF25FE2AE286BA00B576B8 /* AnimationView.swift in Sources */,
 				A794D3392ADE4A6B00A12DB7 /* ApiModels.swift in Sources */,
 				A745F2B32ADFBECA0039B671 /* WebViewDisplay.swift in Sources */,
 				A7A087662AD5A1D10069D0C1 /* WarningMessage.swift in Sources */,
@@ -535,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -592,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -615,10 +619,9 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GangadharSwiftUIProject/Info.plist;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "need access";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "To Unlock App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,10 +650,9 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GangadharSwiftUIProject/Info.plist;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "need access";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "To Unlock App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

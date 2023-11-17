@@ -19,14 +19,17 @@ struct ImageConstants{
     static let SYSSquareAndArrow = "square.and.arrow.down.on.square"
     static let SYSCancel = "xmark.square"
     static let SYSCameraFill = "camera.fill"
+    static let SYSError = "exclamationmark.triangle.fill"
 
 }
 struct ColorConstants{
     static let primaryColor = "Primary"
     static let secondaryColor = "Secondary"
+    static let voilet = "Voilet"
+    static let blackAndWhite = "BlackAndWhite"
 }
 struct AppInfo{
-    static let AppVersion = "0.0.1"
+    static let AppVersion = "Version 0.0.1"
     static let AppName = "GangadharSwiftUI"
 }
 struct StringConstants{
@@ -35,25 +38,25 @@ struct StringConstants{
 struct LabelConstants{
     static let Login = "Login".localized
     static let Register = "Register".localized
-    static let NewUserRegister = "New User? Register".localized
-    static let RegisterAlready = "Registered Already? Login".localized
+    static let NewUserRegister = "NewUserRegister".localized
+    static let RegisterAlready = "RegisterAlready".localized
     static let Download = "Download".localized
     static let Save = "Save".localized
     static let Cancel = "Cancel".localized
     static let Reset = "Reset".localized
     static let Users = "Users".localized
-    static let UsersDetails = "Users Details".localized
-    static let ContactDetails = "Contact Details".localized
+    static let UsersDetails = "UsersDetails".localized
+    static let ContactDetails = "ContactDetails".localized
 }
 
 
 struct PlaceholdersConstants{
-    static let Email = "Enter Email".localized
-    static let Password = "Enter Password".localized
-    static let  FirstName = "Enter First Name".localized
-    static let  LastName = "Enter Last Name".localized
-    static let reEnterPassword = "Re-Enter Password".localized
-    static let Username = "Enter Username".localized
-    static let UserDetails = "Enter User Details".localized
+    static let Email = "Email".localized
+    static let Password = "Password".localized
+    static let  FirstName = "FirstName".localized
+    static let  LastName = "LastName".localized
+    static let reEnterPassword = "reEnterPassword".localized
+    static let Username = "Username".localized
+    static let UserDetails = "UserDetails".localized
 }
 

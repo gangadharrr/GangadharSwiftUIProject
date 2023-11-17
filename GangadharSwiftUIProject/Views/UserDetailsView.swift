@@ -17,7 +17,7 @@ struct UserDetailsView: View {
             }
         }
         else{
-            NavigationStack{
+            NavigationView{
                 VStack{
                     Text(LabelConstants.UsersDetails).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).bold()
                     AsyncImage(url: user.avatarURL,scale: 0.5){ image in
@@ -28,7 +28,7 @@ struct UserDetailsView: View {
                         ProgressView().dynamicTypeSize(.xxxLarge)
                     }
                     Text(user.fullName).font(.title2).bold()
-                    Text(user.email).font(.title3).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    Text(user.email).font(.title3).foregroundColor(.accentColor)
                     Spacer()
                 }
             }

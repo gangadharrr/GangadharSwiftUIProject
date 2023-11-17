@@ -21,7 +21,7 @@ struct LoginView: View {
     @State var UserDisplayScreen:Bool=false
     var body: some View {
         // MainView ->
-        NavigationStack{
+        NavigationView{
             if(isBusy){
                 BusyView(message: Messages.Authenticating)
             }
@@ -57,10 +57,15 @@ struct LoginView: View {
                             self.PasswordError.showWarning = InputPassword.isEmpty
                             print(PasswordError)
                         }
-                        .navigationDestination(isPresented: $ShowRegisterView, destination:{
-                            RegistrationView()
-                        })
-                        .navigationDestination(isPresented: $UserDisplayScreen, destination:{ UserHomeView()})
+                        
+                        NavigationLink(
+                            "", destination: RegistrationView(),
+                            isActive: $ShowRegisterView
+                           )
+                        NavigationLink(
+                            "", destination: UserHomeView(),
+                            isActive: $UserDisplayScreen
+                           )
                         Button {
                             isBusy=true
                             tryLoginWithProtocol()

@@ -49,7 +49,7 @@
     TryAgain = "Try Again";
 
 // RequestConstants
-    Login = "To Login Into App";
+    Login = "Login";
 
 
 

@@ -24,7 +24,7 @@ struct ProfileView: View {
                 }
         }
         else{
-            NavigationStack{
+            NavigationView{
                 VStack{
                     Text(LabelConstants.UsersDetails).font(.title).bold()
                     AsyncImage(url: user.avatarURL,scale: 0.5){image in image.scaledToFit().clipShape(Circle())
@@ -33,21 +33,17 @@ struct ProfileView: View {
                         ProgressView().frame(width:250,height: 250)
                     }
                     Text(user.fullName).font(.title2).bold()
-                    Link(user.email, destination: URL(string: "https://www.github.com")!)
                     Link(user.email, destination: URL(string: "mailto://\(user.email)")!)
                     Spacer()
                     Text(LabelConstants.ContactDetails).bold()
                     Link("+91 8919768667", destination: URL(string: "tel://8919768667")!)
-                    Button("call"){
-                        let phoneNumber = "+123123123"
-                        let numberUrl = URL(string: "tel://\(phoneNumber)")!
+                    Button("Support"){
+                        let numberUrl = URL(string: "https://www.github.com")!
                         if UIApplication.shared.canOpenURL(numberUrl) {
                             UIApplication.shared.open(numberUrl)
                         }
                     }
-//                    if UIApplication.shared.canOpenURL(numberUrl) {
-                        
-//                     }
+
                 }
             }
         }

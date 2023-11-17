@@ -8,14 +8,14 @@
 import Foundation
 
 public class Titles{
-    static let NetworkErrorTitle="Network Error!".localized
-    static let EmailErrorTitle="Invalid Email!".localized
-    static let PasswordErrorTitle="Wrong Password!".localized
-    static let AddProfilePicture="Add Profile Picture".localized
+    static let NetworkErrorTitle="NetworkErrorTitle".localized
+    static let EmailErrorTitle="EmailErrorTitle".localized
+    static let PasswordErrorTitle="PasswordErrorTitle".localized
+    static let AddProfilePicture="AddProfilePicture".localized
 }
 public class Messages{
-    static let NetworkErrorMessages="No, Internet please check your connection".localized
-    static let EmailErrorMessage="Please check your Email".localized
+    static let NetworkErrorMessages="NetworkErrorMessages".localized
+    static let EmailErrorMessage="EmailErrorMessage".localized
     static let PasswordErrorMessage="Please check your Password".localized
     static let Authenticating="Authenticating...".localized
     static let LoginFailed="Login Failed Try Again".localized

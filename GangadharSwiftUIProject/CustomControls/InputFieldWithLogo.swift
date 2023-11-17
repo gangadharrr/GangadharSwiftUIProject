@@ -17,7 +17,7 @@ struct InputFieldWithLogo: View {
     var ShowEye:Bool=true
     var body: some View {
         HStack{
-            Image(systemName: ImageName).foregroundColor(Color("Primary")).dynamicTypeSize(.xxxLarge).frame(maxWidth:13).scaledToFit()
+            Image(systemName: ImageName).foregroundColor(Color(ColorConstants.primaryColor)).dynamicTypeSize(.xxxLarge).frame(maxWidth:13).scaledToFit()
             HStack{
                 
                 if(Password){
@@ -27,8 +27,9 @@ struct InputFieldWithLogo: View {
                             .cornerRadius(7.0).padding(.horizontal,10)
                             .textContentType(.password).frame(maxHeight: 40)
                             .autocapitalization(.none)
+                            
                         if(warningMessage.showWarning){
-                            Button("", systemImage:"exclamationmark.triangle.fill") {
+                            Button("", systemImage:ImageConstants.SYSError) {
                                 showAlert.toggle()
                             }.foregroundColor(.red)
                             .alert(isPresented: $showAlert) {
@@ -50,6 +51,7 @@ struct InputFieldWithLogo: View {
                             .cornerRadius(7.0).padding(.horizontal,10)
                             .textContentType(.password).frame(maxHeight: 40)
                             .autocapitalization(.none)
+                            .background(Color(ColorConstants.blackAndWhite))
                         if(warningMessage.showWarning){
                             Button("", systemImage:"exclamationmark.triangle.fill") {
                                 showAlert.toggle()
@@ -71,7 +73,7 @@ struct InputFieldWithLogo: View {
                         withAnimation{
                             Button("", systemImage: ShowPassword ? "eye.fill" : "eye.slash.fill") {
                                 ShowPassword.toggle()
-                            }.foregroundColor(Color("Primary"))
+                            }.foregroundColor(Color("Primary")).background(Color(ColorConstants.blackAndWhite))
                         }
                     }
                 }
@@ -83,7 +85,7 @@ struct InputFieldWithLogo: View {
                         .frame(maxHeight: 40)
                         .autocapitalization(.none)
                     if(warningMessage.showWarning){
-                        Button("", systemImage:"exclamationmark.triangle.fill") {
+                        Button("", systemImage:ImageConstants.SYSError) {
                             showAlert.toggle()
                         }.foregroundColor(.red)
                         .alert(isPresented: $showAlert) {
@@ -101,7 +103,7 @@ struct InputFieldWithLogo: View {
                     
                     
                 }
-            }.background(Color(white: 0.94))
+            }.background(Color(ColorConstants.blackAndWhite))
                 .cornerRadius(7.0).padding(.horizontal,10)
             
         }.padding(.horizontal,25)
